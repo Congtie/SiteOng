@@ -131,10 +131,11 @@ header .container {
 }
 
 .logo h1 {
-  font-size: 1.5rem; /* Ajustează dimensiunea fontului */
+  font-size: 1.8rem; /* Ajustează dimensiunea fontului */
   white-space: nowrap; /* Previne împărțirea pe mai multe linii */
   overflow: hidden; /* Previne depășirea conținutului */
   text-overflow: ellipsis; /* Adaugă "..." dacă textul depășește spațiul */
+  color: var(--primary-color); /* Păstrează culoarea titlului */
 }
 
 .logo p {
