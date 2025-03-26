@@ -130,12 +130,18 @@ header .container {
   align-items: center;
 }
 
+.logo {
+  margin-right: auto; /* Asigură că logo-ul este aliniat la stânga */
+}
+
 .logo h1 {
-  font-size: 1.8rem; /* Ajustează dimensiunea fontului */
+  font-size: 1.8rem; /* Dimensiunea fontului */
   white-space: nowrap; /* Previne împărțirea pe mai multe linii */
   overflow: hidden; /* Previne depășirea conținutului */
   text-overflow: ellipsis; /* Adaugă "..." dacă textul depășește spațiul */
   color: var(--primary-color); /* Păstrează culoarea titlului */
+  margin-left: -10px; /* Mută titlul mai spre stânga */
+  padding-left: 0; /* Elimină padding-ul */
 }
 
 .logo p {
@@ -292,7 +298,7 @@ nav ul li a:hover {
   padding: 15px;
 }
 
-.event-date .day {
+event-date .day {
   font-size: 2rem;
   font-weight: 700;
   display: block;
