@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Împreună pentru Viitor | ONG</title>
+  <meta name="description" content="Împreună pentru Viitor - ONG dedicat sprijinirii comunităților vulnerabile prin educație, sănătate, protecția mediului și parteneriate durabile.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <div class="logo">
+        <h1>Împreună pentru Viitor</h1>
+        <p>Organizație Non-Guvernamentală</p>
+      </div>
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul id="nav-list">
+          <li><a href="#acasa">Acasă</a></li>
+          <li><a href="#despre-noi">Despre Noi</a></li>
+          <li><a href="#proiecte">Proiecte</a></li>
+          <li><a href="#evenimente">Evenimente</a></li>
+          <li><a href="#implica-te">Implică-te</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-icon" id="mobile-menu-icon" aria-label="Toggle Navigation" tabindex="0">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="acasa" class="hero" role="region" aria-label="Hero Section">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Construim un viitor mai bun pentru comunitate</h2>
+          <p>Alătură-te nouă în misiunea de a crea schimbări pozitive și durabile în societate.</p>
+          <div class="hero-buttons">
+            <a href="#implica-te" class="btn btn-primary">Implică-te</a>
+            <a href="#donatii" class="btn btn-secondary">Donează</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="despre-noi" class="about" role="region" aria-label="Despre Noi">
+      <div class="container">
+        <h2 class="section-title">Despre Noi</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Organizația noastră a fost fondată în 2010 cu scopul de a sprijini comunitățile vulnerabile și de a contribui la dezvoltarea durabilă a societății românești.</p>
+            <p>Misiunea noastră este să creăm un mediu în care fiecare persoană să aibă acces la educație, sănătate și oportunități egale, indiferent de statutul social sau economic.</p>
+            <p>Valorile care ne ghidează:</p>
+            <ul>
+              <li>Integritate și transparență</li>
+              <li>Respect pentru diversitate</li>
+              <li>Colaborare și parteneriat</li>
+              <li>Sustenabilitate și impact pe termen lung</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="/api/placeholder/500/300" alt="Echipa noastră în acțiune la un eveniment" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proiecte" class="projects" role="region" aria-label="Proiecte Noastre">
+      <div class="container">
+        <h2 class="section-title">Proiectele Noastre</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img src="/api/placeholder/300/200" alt="Copii beneficiind de programul Educație pentru Toți" />
+            </div>
+            <div class="project-content">
+              <h3>Educație pentru Toți</h3>
+              <p>Oferim acces la educație de calitate pentru copiii din medii defavorizate prin burse, materiale didactice și programe after-school.</p>
+              <a href="#" class="read-more">Află mai multe</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image">
+              <img src="/api/placeholder/300/200" alt="Voluntari plantând copaci în cadrul proiectului de Protecția Mediului" />
+            </div>
+            <div class="project-content">
+              <h3>Protecția Mediului</h3>
+              <p>Organizăm acțiuni de plantare, ecologizare și educare pentru protejarea mediului înconjurător și conservarea resurselor naturale.</p>
+              <a href="#" class="read-more">Află mai multe</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image">
+              <img src="/api/placeholder/300/200" alt="Pacienți beneficiind de servicii medicale mobile" />
+            </div>
+            <div class="project-content">
+              <h3>Sănătate pentru Comunitate</h3>
+              <p>Facilităm accesul la servicii medicale pentru persoanele din zone rurale prin clinici mobile și campanii de prevenție.</p>
+              <a href="#" class="read-more">Află mai multe</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="evenimente" class="events" role="region" aria-label="Evenimente Viitoare">
+      <div class="container">
+        <h2 class="section-title">Evenimente Viitoare</h2>
+        <div class="events-list" id="evenimente-lista">
+          <!-- Evenimente vor fi adăugate dinamic prin JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section id="implica-te" class="get-involved" role="region" aria-label="Implică-te">
+      <div class="container">
+        <h2 class="section-title">Implică-te</h2>
+        <div class="involvement-options">
+          <article class="involvement-card">
+            <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+            <h3>Voluntariat</h3>
+            <p>Dedică timpul și abilitățile tale pentru a sprijini cauzele în care crezi. Avem nevoie de voluntari în diverse domenii.</p>
+            <a href="#" class="btn btn-small">Devino voluntar</a>
+          </article>
+          <article class="involvement-card" id="donatii">
+            <i class="fas fa-donate" aria-hidden="true"></i>
+            <h3>Donează</h3>
+            <p>Sprijinul tău financiar ne ajută să continuăm proiectele și să extindem impactul nostru în comunitate.</p>
+            <a href="#" class="btn btn-small">Donează acum</a>
+            <a href="#" class="btn btn-secondary" id="tax-deduction-btn">Redirecționează 3.5% din impozit</a>
+          </article>
+          <article class="involvement-card">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            <h3>Parteneriate</h3>
+            <p>Devino partener strategic și împreună putem dezvolta inițiative cu impact mai mare în societate.</p>
+            <a href="#" class="btn btn-small">Propune un parteneriat</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoniale" class="testimonials" role="region" aria-label="Testimoniale">
+      <div class="container">
+        <h2 class="section-title">Ce Spun Partenerii Noștri</h2>
+        <div class="testimonials-slider">
+          <article class="testimonial">
+            <div class="testimonial-content">
+              <p>"Colaborarea cu Împreună pentru Viitor a fost o experiență extraordinară. Profesionalismul și dedicarea echipei sunt remarcabile."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="/api/placeholder/60/60" alt="Portretul Mariei Popescu" />
+              <div>
+                <h4>Maria Popescu</h4>
+                <p>Director General, Compania ABC</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial-content">
+              <p>"Proiectele implementate au avut un impact real și măsurabil în comunitatea noastră. Recomand cu încredere această organizație."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="/api/placeholder/60/60" alt="Portretul lui Ioan Dumitrescu" />
+              <div>
+                <h4>Ioan Dumitrescu</h4>
+                <p>Primarul Comunei Florești</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="testimonial-dots">
+          <span class="dot active" aria-label="Testimonial 1"></span>
+          <span class="dot" aria-label="Testimonial 2"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" role="region" aria-label="Contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <div>
+                <h3>Adresă</h3>
+                <p>Strada Exemplu nr. 123, București, România</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <div>
+                <h3>Telefon</h3>
+                <p>+40 123 456 789</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <div>
+                <h3>Email</h3>
+                <p>contact@impreunapentruviitor.ro</p>
+              </div>
+            </div>
+            <div class="social-media">
+              <h3>Urmărește-ne</h3>
+              <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Trimite-ne un mesaj</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Nume</label>
+                <input type="text" id="name" name="name" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subiect</label>
+                <input type="text" id="subject" name="subject" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Trimite mesajul</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Împreună pentru Viitor</h3>
+          <p>Organizație Non-Guvernamentală</p>
+        </div>
+        <div class="footer-links">
+          <h4>Link-uri Rapide</h4>
+          <ul>
+            <li><a href="#acasa">Acasă</a></li>
+            <li><a href="#despre-noi">Despre Noi</a></li>
+            <li><a href="#proiecte">Proiecte</a></li>
+            <li><a href="#evenimente">Evenimente</a></li>
+            <li><a href="#implica-te">Implică-te</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Abonează-te la newsletter</h4>
+          <p>Primește noutăți despre proiectele și evenimentele noastre.</p>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Adresa ta de email" required aria-required="true" />
+            <button type="submit">Abonează-te</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Împreună pentru Viitor. Toate drepturile rezervate.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Politica de confidențialitate</a>
+          <a href="#">Termeni și condiții</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+    const navList = document.getElementById('nav-list');
+
+    mobileMenuIcon.addEventListener('click', function() {
+      if(navList.style.display === "flex") {
+        navList.style.display = "none";
+      } else {
+        navList.style.display = "flex";
+        navList.style.flexDirection = "column";
+      }
+    });
+
+    // Close mobile menu on link click
+    const navLinks = document.querySelectorAll('#nav-list li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if(window.innerWidth <= 768) {
+          navList.style.display = "none";
+        }
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
