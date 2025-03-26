@@ -168,9 +168,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('/api/placeholder/1200/600') center/cover no-repeat;
-  background-color: #add8e6; /* Bleu */
+  background-color: #0072bb;
   color: var(--light-text);
   text-align: center;
   padding: 180px 0 100px;
