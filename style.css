@@ -142,17 +142,23 @@ header .container {
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
+  display: flex; /* Afișează elementele pe o linie */
+  list-style: none; /* Elimină punctele de la listă */
+  justify-content: space-between; /* Distribuie spațiul între elemente */
+  align-items: center; /* Aliniază elementele pe verticală */
+  padding: 0; /* Elimină spațiul implicit */
+  margin: 0; /* Elimină marginile implicite */
 }
 
 nav ul li {
-  margin-left: 25px;
+  margin: 0 10px; /* Reduce spațiul dintre elemente */
 }
 
 nav ul li a {
-  color: var(--dark-color);
-  font-weight: 500;
+  white-space: nowrap; /* Previne trecerea textului pe mai multe linii */
+  color: var(--dark-color); /* Culoarea textului */
+  font-weight: 500; /* Grosimea fontului */
+  text-decoration: none; /* Elimină sublinierea */
 }
 
 nav ul li a:hover {
