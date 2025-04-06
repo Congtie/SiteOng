@@ -55,8 +55,11 @@ img {
   display: block;
 }
 
+/* Fundal bleu ciel pentru secțiunea principală */
 section {
-  padding: 80px 0;
+  background-color: #d6f0ff; /* Bleu ciel */
+  padding: 80px 0; /* Spațiu interior */
+  border-radius: 8px; /* Colțuri rotunjite, dacă este necesar */
 }
 
 .section-title {
@@ -157,6 +160,13 @@ header .container {
 .logo p {
   font-size: 0.9rem;
   color: var(--dark-color);
+}
+
+.logo-abbreviation {
+  font-size: 2.5rem; /* Dimensiune mai mare decât denumirea asociației */
+  font-weight: bold;
+  color: var(--primary-color); /* Păstrează culoarea principală */
+  margin-top: 5px;
 }
 
 nav ul {
@@ -356,6 +366,19 @@ event-date .day {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+  background-color: #d6f0ff; /* Bleu ciel */
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.involvement-card {
+  background-color: #d6f0ff; /* Bleu ciel */
+  color: var(--dark-color); /* Text închis pentru contrast */
+}
+
+.involvement-card h3, 
+.involvement-card p {
+  color: var(--dark-color); /* Text închis */
 }
 
 .involvement-card {
@@ -381,6 +404,19 @@ event-date .day {
   margin-bottom: 15px;
 }
 
+/* Dimensiune mai mare pentru titlurile din carduri */
+.involvement-card h3 {
+  font-size: 1.8rem; /* Crește dimensiunea fontului */
+  margin-bottom: 20px; /* Adaugă mai mult spațiu sub titlu */
+}
+
+/* Dimensiune mai mare pentru textul din paragrafele cardurilor */
+.involvement-card p {
+  font-size: 1.2rem; /* Crește dimensiunea fontului */
+  line-height: 1.6; /* Crește spațierea între linii pentru lizibilitate */
+  color: var(--dark-color); /* Asigură contrastul textului */
+}
+
 .involvement-card p {
   margin-bottom: 20px;
   color: #666;
@@ -395,6 +431,38 @@ event-date .day {
 
 #tax-deduction-btn:hover {
   background-color: #3a7ddb; /* Aceeași culoare ca pentru butonul primar */
+}
+
+/* Fundal roz intens pentru caseta Donează */
+#donatii {
+  background-color: #e91e63; /* Roz intens */
+  color: var(--light-text); /* Text alb pentru contrast */
+}
+
+#donatii h3, #donatii p {
+  color: var(--light-text); /* Text alb */
+}
+
+/* Fundal galben pentru cardul Voluntariat (primul card) */
+.involvement-card:first-child {
+  background-color: #fbc02d; /* Galben */
+  color: var(--dark-color); /* Text închis pentru contrast */
+}
+
+.involvement-card:first-child h3, 
+.involvement-card:first-child p {
+  color: var (--dark-color); /* Text închis */
+}
+
+/* Fundal galben pentru cardul Parteneriate (ultimul card) */
+.involvement-card:last-child {
+  background-color: #fbc02d; /* Galben */
+  color: var(--dark-color); /* Text închis pentru contrast */
+}
+
+.involvement-card:last-child h3, 
+.involvement-card:last-child p {
+  color: var(--dark-color); /* Text închis */
 }
 
 /* Testimonials Section */
@@ -693,4 +761,49 @@ footer {
   .involvement-options {
     grid-template-columns: 1fr;
   }
+}
+
+/* Mission Statement */
+.mission-statement {
+  text-align: center; /* Centrează textul */
+  font-size: 1.5rem; /* Dimensiune mai mare */
+  font-weight: 500; /* Grosime moderată */
+  margin-bottom: 30px; /* Spațiu sub text */
+  color: var(--text-color); /* Culoarea textului */
+}
+
+.mission-statement strong {
+  font-size: 1.8rem; /* Dimensiune mai mare pentru partea bold */
+}
+
+.mission-statement em {
+  font-style: italic; /* Stil italic pentru partea evidențiată */
+}
+
+/* Programs List */
+.programs-list {
+  text-align: center; /* Centrează textul */
+  font-size: 1.2rem; /* Dimensiune mai mare pentru text */
+  font-weight: 600; /* Grosime moderată */
+  line-height: 1.8; /* Spațiere între linii */
+  margin-bottom: 30px; /* Spațiu sub text */
+  color: var(--text-color); /* Culoarea textului */
+}
+
+.programs-list p {
+  margin-bottom: 15px; /* Spațiu între paragrafe */
+}
+
+.programs-list ul {
+  list-style-type: disc; /* Adaugă liniuțe pentru listă */
+  margin: 20px auto; /* Spațiu între liste */
+  padding-left: 40px; /* Indentare pentru liniuțe */
+  text-align: left; /* Aliniază textul la stânga */
+}
+
+.programs-list li {
+  font-size: 1.2rem; /* Dimensiune mai mare pentru text */
+  font-weight: 600; /* Grosime moderată */
+  line-height: 1.8; /* Spațiere între linii */
+  color: var(--text-color); /* Culoarea textului */
 }
