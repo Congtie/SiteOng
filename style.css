@@ -211,6 +211,7 @@ nav ul li a:hover {
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 50px; /* Adaugă spațiu suplimentar deasupra textului */
 }
 
 .hero h2 {
@@ -240,20 +241,26 @@ nav ul li a:hover {
 /* About Section */
 .about-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-}
-
-.about-text {
-  flex: 1;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .about-image {
   flex: 1;
-  box-shadow: var(--shadow);
-  border-radius: 8px;
-  overflow: hidden;
+  max-width: 300px; /* Dimensiune maximă pentru imagini */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Colțuri rotunjite */
+  box-shadow: var(--shadow); /* Adaugă o umbră */
+}
+
+.about-text {
+  flex: 2;
+  text-align: center; /* Centrează textul */
 }
 
 /* Projects Section */
