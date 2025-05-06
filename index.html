@@ -4,19 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADEPT | ONG</title>
-  <meta name="description" content="Împreună pentru Viitor - ONG dedicat sprijinirii comunităților vulnerabile prin educație, sănătate, protecția mediului și parteneriate durabile.">
+  <meta name="description" content="Asociația Dreptate și Educație pentru Toți - ONG dedicat sprijinirii comunităților vulnerabile prin educație, sănătate, protecția mediului și parteneriate durabile.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header role="banner">
+  <header role="banner" id="main-header">
     <div class="container">
-      <div class="logo">
-        <h1>Asociația Dreptate și Educație pentru Toți</h1>
-        <p>Organizație Non-Guvernamentală</p>
-        <h2 class="logo-abbreviation">ADEPT</h2>
+      <div class="logo-container">
+        <div class="logo-image">
+          <span>A</span>
+        </div>
+        <div class="logo-text">
+          <h1>Asociația Dreptate și Educație pentru Toți</h1>
+          <h2 class="logo-abbreviation">ADEPT</h2>
+          <p>Organizație Non-Guvernamentală</p>
+        </div>
       </div>
-      <nav role="navigation" aria-label="Main Navigation">
+      
+      <button class="mobile-menu-icon" id="mobile-menu-icon" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav role="navigation" aria-label="Main Navigation" id="main-nav">
         <ul id="nav-list">
           <li><a href="#acasa">Acasă</a></li>
           <li><a href="#despre-noi">Despre Noi</a></li>
@@ -26,11 +36,25 @@
           <li><a href="#biblioteca">Biblioteca virtuală</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="mobile-menu-icon" id="mobile-menu-icon" aria-label="Toggle Navigation" tabindex="0">
-          <i class="fas fa-bars"></i>
+        
+        <div class="header-actions-mobile">
+          <a href="#donatii" class="donate-btn">Donează acum</a>
+          <div class="lang-switch">
+            <span>RO</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
         </div>
       </nav>
+      
+      <div class="header-actions">
+        <a href="#donatii" class="donate-btn">Donează acum</a>
+        <div class="lang-switch">
+          <span>RO</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
     </div>
+    <div class="overlay" id="menu-overlay"></div>
   </header>
 
   <main>
@@ -42,7 +66,7 @@
           <div class="hero-buttons">
             <a href="#implica-te" class="btn btn-primary">Implică-te</a>
             <a href="#donatii" class="btn btn-orange">Donează</a>
-            <a href="#tax-deduction" class="btn btn-secondary">Redirecționează 3,5% din impozit</a>
+            <a href="#tax" class="btn btn-secondary">Redirecționează 3,5% din impozit</a>
           </div>
         </div>
       </div>
@@ -53,7 +77,7 @@
         <h2 class="section-title">Despre Noi</h2>
         <div class="about-content">
           <div class="about-image">
-            <img src="WhatsApp Image 2025-03-26 at 20.27.41_22f7ecc0.jpg" alt="Copil studiind la lumina unei lumânări" />
+            <img src="images/copil-studiind.jpg" alt="Copil studiind la lumina unei lumânări" />
           </div>
           <div class="about-text">
             <p class="mission-statement">
@@ -75,7 +99,7 @@
             </div>
           </div>
           <div class="about-image">
-            <img src="WhatsApp Image 2025-03-26 at 20.25.23_4507bb3f.jpg" alt="Copii explorând natura împreună cu un adult" />
+            <img src="images/copii-natura.jpg" alt="Copii explorând natura împreună cu un adult" />
           </div>
         </div>
       </div>
@@ -87,7 +111,7 @@
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-image">
-              <img src="/api/placeholder/300/200" alt="Copii beneficiind de programul Educație pentru Toți" />
+              <img src="images/proiect-educatie.jpg" alt="Copii beneficiind de programul Educație pentru Toți" />
             </div>
             <div class="project-content">
               <h3>Educație pentru Toți</h3>
@@ -97,7 +121,7 @@
           </article>
           <article class="project-card">
             <div class="project-image">
-              <img src="/api/placeholder/300/200" alt="Voluntari plantând copaci în cadrul proiectului de Protecția Mediului" />
+              <img src="images/proiect-mediu.jpg" alt="Voluntari plantând copaci în cadrul proiectului de Protecția Mediului" />
             </div>
             <div class="project-content">
               <h3>Protecția Mediului</h3>
@@ -107,11 +131,11 @@
           </article>
           <article class="project-card">
             <div class="project-image">
-              <img src="/api/placeholder/300/200" alt="Pacienți beneficiind de servicii medicale mobile" />
+              <img src="images/proiect-asistenta.jpg" alt="Asistență juridică pentru victime" />
             </div>
             <div class="project-content">
-              <h3>Asistență juridică pentru VICTIMELE INFRACTIUNILOR VIOLENTE</h3>
-              <p>Copii victime directe, copii orfani, copii martori la violență, sprijin pentru familiile copiilor uciși</p>
+              <h3>Asistență juridică pentru VICTIMELE INFRACȚIUNILOR VIOLENTE</h3>
+              <p>Copii victime directe, copii orfani, copii martori la violență, sprijin pentru familiile copiilor uciși</p>
               <a href="#" class="read-more">Află mai multe</a>
             </div>
           </article>
@@ -123,7 +147,59 @@
       <div class="container">
         <h2 class="section-title">Evenimente Viitoare</h2>
         <div class="events-list" id="evenimente-lista">
-          <!-- Evenimente vor fi adăugate dinamic prin JavaScript -->
+          <!-- Exemplu de eveniment static (în cazul în care JavaScript nu se încarcă) -->
+          <article class="event-card">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Mai</span>
+            </div>
+            <div class="event-details">
+              <h3>Workshop Educațional</h3>
+              <p class="event-location"><i class="fas fa-map-marker-alt"></i> Centrul Cultural, București</p>
+              <p class="event-time"><i class="far fa-clock"></i> 10:00 - 14:00</p>
+              <p class="event-description">Workshop pentru dezvoltarea abilităților creative la copii.</p>
+              <a href="#" class="btn btn-small">Înscrie-te</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="biblioteca" class="library" role="region" aria-label="Biblioteca Virtuală">
+      <div class="container">
+        <h2 class="section-title">Biblioteca Virtuală</h2>
+        <p class="section-description">Resurse educaționale și materiale informative pentru copii, părinți și profesioniști.</p>
+        <div class="resources-grid">
+          <article class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="resource-content">
+              <h3>Ghiduri Educaționale</h3>
+              <p>Colecție de materiale care oferă sprijin în procesul educațional.</p>
+              <a href="#" class="read-more">Accesează</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="resource-content">
+              <h3>Publicații și Rapoarte</h3>
+              <p>Studii și rapoarte despre situația educației și drepturilor copilului.</p>
+              <a href="#" class="read-more">Descarcă</a>
+            </div>
+          </article>
+          <article class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="resource-content">
+              <h3>Materiale Video</h3>
+              <p>Tutoriale, webinarii și prezentări despre educație și drepturile copilului.</p>
+              <a href="#" class="read-more">Vizionează</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -143,7 +219,7 @@
             <h3>Donează</h3>
             <p>Sprijinul tău financiar ne ajută să continuăm proiectele și să extindem impactul nostru în comunitate.</p>
             <a href="#" class="btn btn-primary">Donează în RON, EURO, USD</a>
-            <a href="#" class="btn btn-primary" id="tax-deduction-btn">Redirecționează 3.5% din impozit</a>
+            <a href="#tax" class="btn btn-primary" id="tax-deduction-btn">Redirecționează 3.5% din impozit</a>
           </article>
           <article class="involvement-card">
             <i class="fas fa-users" aria-hidden="true"></i>
@@ -155,16 +231,43 @@
       </div>
     </section>
 
+    <section id="tax" class="tax-deduction" role="region" aria-label="Redirecționează 3.5% din impozit">
+      <div class="container">
+        <h2 class="section-title">Redirecționează 3.5% din impozit</h2>
+        <div class="tax-content">
+          <div class="tax-info">
+            <p>Poți susține activitatea noastră redirecționând 3.5% din impozitul pe venit, fără să te coste nimic în plus!</p>
+            <h3>Cum procedezi:</h3>
+            <ol>
+              <li>Descarcă și completează formularul 230</li>
+              <li>Completează datele noastre fiscale</li>
+              <li>Depune formularul la administrația financiară sau trimite-l prin poștă</li>
+            </ol>
+            <p>Date fiscale ADEPT:</p>
+            <ul>
+              <li>Denumire: Asociația Dreptate și Educație pentru Toți</li>
+              <li>Cod fiscal: XXXXXXXXXXXX</li>
+              <li>Cont bancar: ROXX XXXX XXXX XXXX XXXX XXXX</li>
+            </ul>
+          </div>
+          <div class="tax-actions">
+            <a href="#" class="btn btn-primary">Descarcă formularul 230</a>
+            <a href="#" class="btn btn-secondary">Află mai multe detalii</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="testimoniale" class="testimonials" role="region" aria-label="Testimoniale">
       <div class="container">
         <h2 class="section-title">Ce Spun Partenerii Noștri</h2>
         <div class="testimonials-slider">
           <article class="testimonial">
             <div class="testimonial-content">
-              <p>"Colaborarea cu Împreună pentru Viitor a fost o experiență extraordinară. Profesionalismul și dedicarea echipei sunt remarcabile."</p>
+              <p>"Colaborarea cu ADEPT a fost o experiență extraordinară. Profesionalismul și dedicarea echipei sunt remarcabile."</p>
             </div>
             <div class="testimonial-author">
-              <img src="/api/placeholder/60/60" alt="Portretul Mariei Popescu" />
+              <img src="images/testimonial-1.jpg" alt="Portretul Mariei Popescu" />
               <div>
                 <h4>Maria Popescu</h4>
                 <p>Director General, Compania ABC</p>
@@ -176,7 +279,7 @@
               <p>"Proiectele implementate au avut un impact real și măsurabil în comunitatea noastră. Recomand cu încredere această organizație."</p>
             </div>
             <div class="testimonial-author">
-              <img src="/api/placeholder/60/60" alt="Portretul lui Ioan Dumitrescu" />
+              <img src="images/testimonial-2.jpg" alt="Portretul lui Ioan Dumitrescu" />
               <div>
                 <h4>Ioan Dumitrescu</h4>
                 <p>Primarul Comunei Florești</p>
@@ -214,7 +317,7 @@
               <i class="fas fa-envelope" aria-hidden="true"></i>
               <div>
                 <h3>Email</h3>
-                <p>contact@impreunapentruviitor.ro</p>
+                <p>contact@adept.ro</p>
               </div>
             </div>
             <div class="social-media">
@@ -258,7 +361,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <h3>Împreună pentru Viitor</h3>
+          <h3>Asociația Dreptate și Educație pentru Toți</h3>
+          <p class="logo-abbreviation">ADEPT</p>
           <p>Organizație Non-Guvernamentală</p>
         </div>
         <div class="footer-links">
@@ -268,7 +372,9 @@
             <li><a href="#despre-noi">Despre Noi</a></li>
             <li><a href="#proiecte">Proiecte</a></li>
             <li><a href="#evenimente">Evenimente</a></li>
+            <li><a href="#biblioteca">Biblioteca virtuală</a></li>
             <li><a href="#implica-te">Implică-te</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-newsletter">
@@ -281,7 +387,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Împreună pentru Viitor. Toate drepturile rezervate.</p>
+        <p>&copy; 2025 ADEPT. Toate drepturile rezervate.</p>
         <div class="footer-bottom-links">
           <a href="#">Politica de confidențialitate</a>
           <a href="#">Termeni și condiții</a>
@@ -290,30 +396,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-    const navList = document.getElementById('nav-list');
-
-    mobileMenuIcon.addEventListener('click', function() {
-      if(navList.style.display === "flex") {
-        navList.style.display = "none";
-      } else {
-        navList.style.display = "flex";
-        navList.style.flexDirection = "column";
-      }
-    });
-
-    // Close mobile menu on link click
-    const navLinks = document.querySelectorAll('#nav-list li a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        if(window.innerWidth <= 768) {
-          navList.style.display = "none";
-        }
-      });
-    });
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
