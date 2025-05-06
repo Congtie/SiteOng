@@ -1,36 +1,12 @@
-// Mobile Menu Toggle
-const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-const navList = document.getElementById('nav-list');
-
-mobileMenuIcon.addEventListener('click', function() {
-  if (navList.style.display === "flex") {
-    navList.style.display = "none";
-  } else {
-    navList.style.display = "flex";
-    navList.style.flexDirection = "column";
-  }
-});
-
-// Close mobile menu on link click
-const navLinks = document.querySelectorAll('#nav-list li a');
-navLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    if (window.innerWidth <= 768) {
-      navList.style.display = "none";
-    }
-  });
-});
-
-// Script pentru header modern
 document.addEventListener('DOMContentLoaded', function() {
-  // Variabile pentru elementele meniului
+  // Elemente DOM
   const header = document.getElementById('main-header');
   const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-  const mainNav = document.getElementById('main-nav');
+  const mainNav = document.getElementById('nav-list');
   const menuOverlay = document.getElementById('menu-overlay');
   const navLinks = document.querySelectorAll('#nav-list li a');
 
-  // Funcție pentru header sticky la scroll
+  // Header sticky la scroll
   window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
@@ -39,41 +15,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Funcție pentru deschiderea meniului mobil
+  // Funcție pentru deschiderea/închiderea meniului mobil
   function toggleMobileMenu() {
     const isOpen = mainNav.classList.contains('active');
     
     if (isOpen) {
       mainNav.classList.remove('active');
-      menuOverlay.classList.remove('active');
+      if (menuOverlay) menuOverlay.classList.remove('active');
       mobileMenuIcon.innerHTML = '<i class="fas fa-bars"></i>';
       document.body.style.overflow = '';
     } else {
       mainNav.classList.add('active');
-      menuOverlay.classList.add('active');
+      if (menuOverlay) menuOverlay.classList.add('active');
       mobileMenuIcon.innerHTML = '<i class="fas fa-times"></i>';
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'; // Previne scroll-ul în background
     }
   }
 
-  // Adăugare evenimente click
+  // Adăugare eveniment click pentru butonul de meniu
   mobileMenuIcon.addEventListener('click', toggleMobileMenu);
-  menuOverlay.addEventListener('click', toggleMobileMenu);
+  
+  // Adăugare eveniment click pentru overlay (dacă există)
+  if (menuOverlay) {
+    menuOverlay.addEventListener('click', toggleMobileMenu);
+  }
 
   // Închidere meniu la click pe link
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
         toggleMobileMenu();
       }
     });
   });
 
-  // Închidere meniu la redimensionarea ecranului
+  // Închidere meniu și resetare la redimensionarea ecranului
   window.addEventListener('resize', function() {
     if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
       mainNav.classList.remove('active');
-      menuOverlay.classList.remove('active');
+      if (menuOverlay) menuOverlay.classList.remove('active');
       mobileMenuIcon.innerHTML = '<i class="fas fa-bars"></i>';
       document.body.style.overflow = '';
     }
